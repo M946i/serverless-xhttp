@@ -16,9 +16,9 @@ const PORT = process.env.PORT || 3000;
 const SETTINGS = {
     ['UUID']: UUID,
     ['LOG_LEVEL']: 'none',       // 日志级别,调试使用,none,info,debug,warn,error
-    ['BUFFER_SIZE']: '1024',     // 缓冲区大小
+    ['BUFFER_SIZE']: '16384',     // 缓冲区大小
     ['XPATH']: `%2F${XPATH}`,    // xhttp路径
-    ['MAX_BUFFERED_POSTS']: 50,  // 最大缓存POST请求数
+    ['MAX_BUFFERED_POSTS']: 1000,  // 最大缓存POST请求数
     ['MAX_POST_SIZE']: 2000000,  // 每个POST最大字节数到2MB
     ['SESSION_TIMEOUT']: 30000,  // 会话超时时间(30秒)
     ['CHUNK_SIZE']: 64 * 1024,   // 64KB 的数据块大小，更高效
