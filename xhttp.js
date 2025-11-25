@@ -20,11 +20,11 @@ const SETTINGS = {
     ['XPATH']: `%2F${XPATH}`,    // xhttp路径
     ['MAX_BUFFERED_POSTS']: 10000,  // 最大缓存POST请求数
     ['MAX_POST_SIZE']: 20000000,  // 每个POST最大字节数到2MB
-    ['SESSION_TIMEOUT']: 30000,  // 会话超时时间(30秒)
+    ['SESSION_TIMEOUT']: 300000,  // 会话超时时间(30秒)
     ['CHUNK_SIZE']: 1024 * 1024,   // 64KB 的数据块大小，更高效
-    ['TCP_NODELAY']: true,       // 启用 TCP_NODELAY
+    ['TCP_NODELAY']: false,       // 启用 TCP_NODELAY
     ['TCP_KEEPALIVE']: true,     // 启用 TCP keepalive
-    ['SESSION_CLEANUP_INTERVAL']: 60000, // 会话清理间隔(60秒)
+    ['SESSION_CLEANUP_INTERVAL']: 600000, // 会话清理间隔(60秒)
     ['MAX_SESSION_AGE']: 300000,         // 最大会话存活时间(5分钟)
     ['CONNECTION_POOL_SIZE']: 1000,       // 连接池大小
     ['WRITE_BUFFER_SIZE']: 1024 * 1024,    // 写缓冲区大小
