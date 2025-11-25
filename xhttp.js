@@ -26,11 +26,11 @@ const SETTINGS = {
     ['TCP_KEEPALIVE']: true,     // 启用 TCP keepalive
     ['SESSION_CLEANUP_INTERVAL']: 60000, // 会话清理间隔(60秒)
     ['MAX_SESSION_AGE']: 300000,         // 最大会话存活时间(5分钟)
-    ['CONNECTION_POOL_SIZE']: 100,       // 连接池大小
+    ['CONNECTION_POOL_SIZE']: 1000,       // 连接池大小
     ['WRITE_BUFFER_SIZE']: 64 * 1024,    // 写缓冲区大小
     ['READ_BUFFER_SIZE']: 64 * 1024,     // 读缓冲区大小
-    ['BATCH_PROCESS_SIZE']: 10,          // 批处理大小
-    ['ENABLE_COMPRESSION']: false,       // 禁用压缩以提升速度
+    ['BATCH_PROCESS_SIZE']: 100,          // 批处理大小
+    ['ENABLE_COMPRESSION']: true,       // 禁用压缩以提升速度
 }
 
 // 自定义DNS解析器
