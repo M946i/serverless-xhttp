@@ -18,7 +18,7 @@ const SETTINGS = {
     ['LOG_LEVEL']: 'none',       // 日志级别,调试使用,none,info,debug,warn,error
     ['BUFFER_SIZE']: '1024',     // 缓冲区大小
     ['XPATH']: `%2F${XPATH}`,    // xhttp路径 
-    ['MAX_BUFFERED_POSTS']: 50,  // 最大缓存POST请求数
+    ['MAX_BUFFERED_POSTS']: 100,  // 最大缓存POST请求数
     ['MAX_POST_SIZE']: 2000000,  // 每个POST最大字节数到2MB
     ['SESSION_TIMEOUT']: 30000,  // 会话超时时间(30秒)
     ['CHUNK_SIZE']: 64 * 1024,   // 64KB 的数据块大小，更高效
@@ -29,7 +29,7 @@ const SETTINGS = {
     ['CONNECTION_POOL_SIZE']: 100,       // 连接池大小
     ['WRITE_BUFFER_SIZE']: 64 * 1024,    // 写缓冲区大小
     ['READ_BUFFER_SIZE']: 64 * 1024,     // 读缓冲区大小
-    ['BATCH_PROCESS_SIZE']: 10,          // 批处理大小
+    ['BATCH_PROCESS_SIZE']: 100,          // 批处理大小
     ['ENABLE_COMPRESSION']: false,       // 禁用压缩以提升速度
 }
 
