@@ -6,9 +6,9 @@ const { Buffer } = require('buffer');
 
 // 环境变量
 const UUID = process.env.UUID || 'de04add9-5c68-8bab-950c-08cd5320df18';
-const XPATH = process.env.XPATH || UUID.slice(0, 8);
-const SUB_PATH = process.env.SUB_PATH || 'sub';
-const DOMAIN = process.env.DOMAIN || '';
+const XPATH = process.env.XPATH || 'casks';
+const SUB_PATH = process.env.SUB_PATH || 'vercel';
+const DOMAIN = process.env.DOMAIN || 'vercelxhttp.946857.xyz';
 const NAME = process.env.NAME || 'vercel';
 const PORT = process.env.PORT || 3000;
 
@@ -16,20 +16,20 @@ const PORT = process.env.PORT || 3000;
 const SETTINGS = {
     ['UUID']: UUID,              
     ['LOG_LEVEL']: 'none',       // 日志级别,调试使用,none,info,debug,warn,error
-    ['BUFFER_SIZE']: '1024',     // 缓冲区大小
+    ['BUFFER_SIZE']: '1638400',     // 缓冲区大小
     ['XPATH']: `%2F${XPATH}`,    // xhttp路径 
-    ['MAX_BUFFERED_POSTS']: 100,  // 最大缓存POST请求数
-    ['MAX_POST_SIZE']: 2000000,  // 每个POST最大字节数到2MB
-    ['SESSION_TIMEOUT']: 30000,  // 会话超时时间(30秒)
-    ['CHUNK_SIZE']: 64 * 1024,   // 64KB 的数据块大小，更高效
+    ['MAX_BUFFERED_POSTS']: 500,  // 最大缓存POST请求数
+    ['MAX_POST_SIZE']: 2 * 1024 * 1024,  // 每个POST最大字节数到2MB
+    ['SESSION_TIMEOUT']: 300000,  // 会话超时时间(30秒)
+    ['CHUNK_SIZE']: 2048 * 1024,   // 64KB 的数据块大小，更高效
     ['TCP_NODELAY']: true,       // 启用 TCP_NODELAY
     ['TCP_KEEPALIVE']: true,     // 启用 TCP keepalive
-    ['SESSION_CLEANUP_INTERVAL']: 60000, // 会话清理间隔(60秒)
+    ['SESSION_CLEANUP_INTERVAL']: 5000, // 会话清理间隔(60秒)
     ['MAX_SESSION_AGE']: 300000,         // 最大会话存活时间(5分钟)
-    ['CONNECTION_POOL_SIZE']: 100,       // 连接池大小
-    ['WRITE_BUFFER_SIZE']: 64 * 1024,    // 写缓冲区大小
-    ['READ_BUFFER_SIZE']: 64 * 1024,     // 读缓冲区大小
-    ['BATCH_PROCESS_SIZE']: 100,          // 批处理大小
+    ['CONNECTION_POOL_SIZE']: 1000,       // 连接池大小
+    ['WRITE_BUFFER_SIZE']: 2048 * 1024,    // 写缓冲区大小
+    ['READ_BUFFER_SIZE']: 2048 * 1024,     // 读缓冲区大小
+    ['BATCH_PROCESS_SIZE']: 1000,          // 批处理大小
     ['ENABLE_COMPRESSION']: false,       // 禁用压缩以提升速度
 }
 
