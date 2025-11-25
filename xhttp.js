@@ -5,7 +5,7 @@ const axios = require('axios');
 const { Buffer } = require('buffer');
 
 // 环境变量
-const UUID = process.env.UUID || 'a2056d0d-c98e-4aeb-9aab-37f64edd5710';
+const UUID = process.env.UUID || 'de04add9-5c68-8bab-950c-08cd5320df18';
 const XPATH = process.env.XPATH || UUID.slice(0, 8);
 const SUB_PATH = process.env.SUB_PATH || 'sub';
 const DOMAIN = process.env.DOMAIN || '';
